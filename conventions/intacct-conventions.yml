@@ -1,0 +1,42 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.sage.com/intacct/docs/1/sage-intacct-rest-api/api-essentials
+authentication:
+  rest: OAuth 2.0 / OpenID Connect (Bearer access token) — see authentication/intacct-authentication.yml
+  legacy_xml: session-based sender + user credentials
+request_composition:
+  batch: >-
+    The REST API supports batch requests to run multiple operations in a single
+    HTTP call.
+  bulk: >-
+    Bulk requests support high-volume create/update operations against a single
+    object type.
+  composite: >-
+    Composite requests chain dependent operations, passing results between steps
+    in one round trip.
+  docs: https://developer.sage.com/intacct/docs/1/sage-intacct-rest-api/api-essentials
+pagination:
+  style: offset/size
+  notes: >-
+    List endpoints return paged result sets; page controls are documented in the
+    REST API essentials. The legacy XML query interface uses readByQuery with
+    pagegetnext continuation.
+error_envelope:
+  rest: JSON error object with HTTP status codes
+  legacy_xml: <errormessage><error> blocks with errorno / description
+  cross_ref: (no OpenAPI captured yet; error catalog not derived)
+idempotency:
+  supported: unknown
+  notes: >-
+    No documented idempotency-key header was confirmed for the REST API during
+    enrichment; not asserting Idempotency support (no canonical Idempotency
+    pointer emitted) to avoid fabrication.
+versioning: uri-path (Intacct 1) — see lifecycle/intacct-lifecycle.yml
+rate_limits:
+  notes: >-
+    Sage Intacct enforces per-company request throttling; specific published
+    numeric limits were not captured during this pass.
+cross_links:
+  authentication: authentication/intacct-authentication.yml
+  scopes: scopes/intacct-scopes.yml
+  lifecycle: lifecycle/intacct-lifecycle.yml

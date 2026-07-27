@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: searched
+source: https://api.intacct.com/.well-known/openid-configuration
+docs: https://developer.sage.com/intacct/docs/1/sage-intacct-rest-api/api-essentials
+schemes:
+- name: OAuth2 / OpenID Connect
+  source: well-known/intacct-openid-configuration.json
+  issuer: https://api.intacct.com
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.intacct.com/ia/authorize
+    tokenUrl: https://api.intacct.com/ia/api/v1/oauth2/token
+  - flow: clientCredentials
+    tokenUrl: https://api.intacct.com/ia/api/v1/oauth2/token
+  - flow: tokenExchange
+    tokenUrl: https://api.intacct.com/ia/api/v1/oauth2/token
+scopes:
+- scope: openid
+  description: Request an OpenID Connect ID token identifying the authenticated user/company.
+  flows: [authorizationCode]
+  sources: [well-known/intacct-openid-configuration.json]
+- scope: offline_access
+  description: Issue a refresh token so the client can obtain new access tokens without user interaction.
+  flows: [authorizationCode]
+  sources: [well-known/intacct-openid-configuration.json]
+- scope: sage/ai-agents
+  description: Grant AI agents / MCP clients governed access to Sage Intacct data via the AI Gateway.
+  flows: [authorizationCode, clientCredentials, tokenExchange]
+  sources: [well-known/intacct-openid-configuration.json]
+- scope: token-exchange
+  description: Permit RFC 8693 OAuth 2.0 token exchange (delegation/impersonation) for downstream calls.
+  flows: [tokenExchange]
+  sources: [well-known/intacct-openid-configuration.json]

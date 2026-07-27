@@ -1,0 +1,22 @@
+generated: '2026-07-19'
+method: searched
+source: https://api.intacct.com/.well-known/
+host: https://api.intacct.com
+documents:
+- path: /.well-known/security.txt
+  status: 200
+  file: intacct-security.txt
+- path: /.well-known/openid-configuration
+  status: 200
+  file: intacct-openid-configuration.json
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/jwks.json
+  status: 200
+  note: referenced by openid-configuration jwks_uri (not saved verbatim)
+other_hosts:
+- host: https://developer.sage.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: identical Sage Security Team security.txt (Contact security@sage.com / soc@sage.com)

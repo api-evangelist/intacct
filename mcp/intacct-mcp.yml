@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://www.sage.com/en-us/sage-business-cloud/intacct/product-capabilities/platform/ai-gateway/
+server:
+  name: Sage Intacct AI Gateway (MCP)
+  vendor: Sage
+  transport: http
+  official: true
+  description: >-
+    Sage's AI Gateway exposes a governed Model Context Protocol (MCP) server on top of the
+    Sage Intacct REST and Web Services APIs, giving AI applications and agents auditable,
+    permission-scoped access to Intacct financial data. Access is gated by the OAuth 2.0
+    "sage/ai-agents" scope and the token-exchange grant advertised in the api.intacct.com
+    OpenID discovery document.
+corroboration:
+- source: well-known/intacct-openid-configuration.json
+  evidence: scopes_supported includes "sage/ai-agents" and grant_types_supported includes token-exchange
+- source: https://www.sage.com/en-us/news/press-releases/2025/11/sage-launches-ai-developer-solutions-to-accelerate-partner-led/
+  evidence: Sage AI Developer Solutions announcement referencing MCP surface on the Sage Platform
+notes: >-
+  Third-party MCP servers for Sage Intacct also exist (CData, Apideck, Zapier, and an
+  open-source read-only server), but only the Sage AI Gateway is first-party and is what
+  this pointer represents.

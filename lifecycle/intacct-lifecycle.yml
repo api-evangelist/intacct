@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: https://developer.sage.com/intacct/docs/openapi
+versioning:
+  scheme: uri-path
+  current: '1'
+  rest_reference: https://developer.sage.com/intacct/apis/intacct/1/intacct-openapi
+  notes: >-
+    Two API generations coexist. The REST API (Intacct 1) is the strategic
+    interface and receives all new objects and features. The XML Web Services API
+    remains fully supported for existing integrations.
+deprecation:
+  policy: >-
+    Sage continues to support the XML Web Services API but directs all new
+    development to the REST API; new objects and features are released on REST
+    first. There is no announced sunset date for the XML API, but it is on a
+    maintenance footing relative to REST.
+  legacy_interface: XML Web Services API (https://developer.intacct.com/)
+  strategic_interface: REST API (https://developer.sage.com/intacct)
+status_page: https://status.sage.com/
+sla:
+  notes: >-
+    Uptime and service commitments are governed by the Sage Intacct product and
+    service terms; the Sage status page publishes live availability.
+  terms: https://www.sage.com/en-us/legal/

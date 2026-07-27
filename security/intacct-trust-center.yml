@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.sage.com/en-us/trust-security/security/technical/standards-compliance/
+url: https://www.sage.com/en-gb/trust-security/
+certifications:
+- SOC 1 Type II (SSAE 18 / ISAE 3402)
+- SOC 2 Type II
+- ISO 27001
+- PCI DSS Level 1
+- HIPAA
+- GDPR
+- ISAE 3000
+frameworks_referenced:
+- ISO 27002
+- NIST
+- AICPA
+evidence:
+- source: https://www.sage.com/en-us/trust-security/security/technical/standards-compliance/
+  keywords: [soc 1, soc 2, iso 27001, pci dss, hipaa, gdpr]
+- source: https://www.sage.com/en-us/blog/sage-intacct-expands-system-and-data-security-certifications/
+  keywords: [certifications, security]
+notes: >-
+  Sage Intacct is delivered under Sage's information security management program
+  (ISMS built to ISO 27001). Certification scope is audited annually by independent
+  third parties.

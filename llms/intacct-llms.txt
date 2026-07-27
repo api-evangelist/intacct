@@ -1,0 +1,38 @@
+# Sage Intacct
+
+> Sage Intacct is a cloud-based financial management and accounting (ERP) platform for growing and mid-market businesses. Its developer program exposes a modern REST API (OAuth 2.0, batch/bulk/composite) and the long-standing XML Web Services API, with official SDKs for PHP, .NET, and Node.js and a governed MCP surface via the Sage AI Gateway.
+
+## APIs
+
+- [Sage Intacct REST API](https://developer.sage.com/intacct/docs/openapi): Modern REST API (base https://api.intacct.com) using OAuth 2.0; recommended for new client applications.
+- [Sage Intacct XML Web Services API](https://developer.intacct.com/): Session-based XML/HTTP API, fully supported for existing integrations.
+
+## Docs
+
+- [Developer Portal](https://developer.sage.com/intacct): Sage Intacct developer program home.
+- [Get Started](https://developer.sage.com/intacct/docs/1/sage-intacct-rest-api/get-started): Authenticate, send test requests, plan a client app.
+- [API Essentials](https://developer.sage.com/intacct/docs/1/sage-intacct-rest-api/api-essentials): Batch, bulk, composite requests, pagination.
+- [REST API Reference](https://developer.sage.com/intacct/apis/intacct/1/intacct-openapi): OpenAPI-backed REST reference.
+- [XML API Reference](https://developer.intacct.com/api/): Legacy XML Web Services reference.
+
+## Authentication
+
+- [OpenID configuration](https://api.intacct.com/.well-known/openid-configuration): Issuer, authorize/token endpoints, scopes (openid, offline_access, sage/ai-agents, token-exchange), grant types (authorization_code, client_credentials, token-exchange).
+
+## SDKs
+
+- [PHP SDK](https://packagist.org/packages/intacct/intacct-sdk-php): composer require intacct/intacct-sdk-php
+- [.NET SDK](https://www.nuget.org/packages/Intacct.SDK): dotnet add package Intacct.SDK
+- [JavaScript / Node.js SDK](https://www.npmjs.com/package/@intacct/intacct-sdk): npm install @intacct/intacct-sdk
+- [Python SDK (WIP)](https://github.com/intacct/intacct-sdk-python): Official, not yet on PyPI.
+- [GitHub organization](https://github.com/intacct): Official SDKs and examples.
+
+## AI / Agents
+
+- [Sage Intacct AI Gateway (MCP)](https://www.sage.com/en-us/sage-business-cloud/intacct/product-capabilities/platform/ai-gateway/): Governed Model Context Protocol server over Intacct APIs.
+
+## Trust & Security
+
+- [Trust & Security](https://www.sage.com/en-gb/trust-security/): SOC 1/2 Type II, ISO 27001, PCI DSS L1, HIPAA, GDPR.
+- [security.txt](https://api.intacct.com/.well-known/security.txt): Contact security@sage.com / soc@sage.com.
+- [Status](https://status.sage.com/): Live service availability.

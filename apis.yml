@@ -1,27 +1,149 @@
 aid: intacct
-name: Intacct
-description: Intacct is a company surfaced as a portfolio company of battery-ventures, bessemer-venture-partners
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+name: Sage Intacct
+description: >-
+  Sage Intacct is a cloud-based financial management and accounting (ERP)
+  platform for growing and mid-market businesses, delivering core financials,
+  accounts payable and receivable, cash management, order and purchasing,
+  multi-entity and global consolidations, project accounting, revenue
+  recognition, dashboards and advanced reporting. The Sage Intacct Developer
+  program exposes this functionality through two programmable interfaces: a
+  modern REST API (OAuth 2.0, batch/bulk/composite requests) and the long-standing
+  XML Web Services API, backed by official SDKs for PHP, .NET, and Node.js/JavaScript.
+  New objects and features ship on the REST API first, and Sage's AI Gateway adds a
+  governed Model Context Protocol (MCP) surface for AI agents on top of the same APIs.
 url: https://raw.githubusercontent.com/api-evangelist/intacct/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - battery-ventures
 - bessemer-venture-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profile
+x-tier-reason: enriched-from-developer-surface
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://logo.clearbit.com/sageintacct.com
 tags:
 - Company
-apis: []
+- Accounting
+- ERP
+- Financial Management
+- Cloud Accounting
+- Invoicing
+- Payments
+- SaaS
+- REST API
+- OAuth
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Sage Intacct REST API
+  description: >-
+    Modern REST API for Sage Intacct using standard HTTP verbs and predictable
+    URLs to operate on Intacct objects and data. Authenticates with OAuth 2.0 and
+    supports batch, bulk, and composite requests. Sage recommends the REST API for
+    new client applications; all new objects and features are released here first.
+  humanURL: https://developer.sage.com/intacct/docs/openapi
+  baseURL: https://api.intacct.com
+  properties:
+  - type: APIReference
+    url: https://developer.sage.com/intacct/apis/intacct/1/intacct-openapi
+  - type: Documentation
+    url: https://developer.sage.com/intacct/docs/1/sage-intacct-rest-api/get-started
+  - type: GettingStarted
+    url: https://developer.sage.com/intacct/docs/1/sage-intacct-rest-api/get-started
+  - type: Authentication
+    url: authentication/intacct-authentication.yml
+  - type: OAuthScopes
+    url: scopes/intacct-scopes.yml
+- name: Sage Intacct XML Web Services API
+  description: >-
+    The long-standing XML/HTTP Web Services API for Sage Intacct, session-based
+    with sender and user credentials. Still fully supported alongside the REST API;
+    official SDKs (PHP, .NET, Node.js) are built on this interface.
+  humanURL: https://developer.intacct.com/
+  baseURL: https://api.intacct.com/ia/xml/xmlgw.phtml
+  properties:
+  - type: APIReference
+    url: https://developer.intacct.com/api/
+  - type: Documentation
+    url: https://developer.intacct.com/web-services/
 common:
 - type: Website
   url: https://www.sageintacct.com/
+- type: DeveloperPortal
+  url: https://developer.sage.com/intacct
+- type: Documentation
+  url: https://developer.sage.com/intacct/docs/openapi
+- type: APIReference
+  url: https://developer.sage.com/intacct/apis/intacct/1/intacct-openapi
+- type: GettingStarted
+  url: https://developer.sage.com/intacct/docs/1/sage-intacct-rest-api/get-started
+- type: GitHubOrganization
+  url: https://github.com/intacct
+- type: Blog
+  url: https://www.sage.com/en-us/blog/
+- type: Support
+  url: https://www.sage.com/en-us/support/
+- type: Pricing
+  url: https://www.sage.com/en-us/sage-business-cloud/intacct/pricing/
+- type: SignUp
+  url: https://developer.sage.com/intacct
+- type: TermsOfService
+  url: https://www.sage.com/en-us/legal/
+- type: PrivacyPolicy
+  url: https://www.sage.com/en-us/legal/privacy-and-cookies/
+- type: StatusPage
+  url: https://status.sage.com/
+- type: TrustCenter
+  url: https://www.sage.com/en-gb/trust-security/
+- type: Compliance
+  url: https://www.sage.com/en-us/trust-security/security/technical/standards-compliance/
+- type: Packages
+  url: packages/intacct-packages.yml
+- type: SDKs
+  url: packages/intacct-packages.yml
+- type: MCPServer
+  url: mcp/intacct-mcp.yml
+- type: WellKnown
+  url: well-known/intacct-well-known.yml
+- type: SecurityTxt
+  url: well-known/intacct-security.txt
+- type: Authentication
+  url: authentication/intacct-authentication.yml
+- type: OAuthScopes
+  url: scopes/intacct-scopes.yml
+- type: DomainSecurity
+  url: security/intacct-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/intacct-vulnerability-disclosure.yml
+- type: Security
+  url: security/intacct-vulnerability-disclosure.yml
+- type: Lifecycle
+  url: lifecycle/intacct-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/intacct-lifecycle.yml
+- type: Conventions
+  url: conventions/intacct-conventions.yml
+- type: LLMsTxt
+  url: llms/intacct-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

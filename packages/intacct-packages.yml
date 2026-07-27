@@ -1,0 +1,36 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/intacct
+packages:
+- language: php
+  registry: packagist
+  name: intacct/intacct-sdk-php
+  url: https://packagist.org/packages/intacct/intacct-sdk-php
+  repo: https://github.com/intacct/intacct-sdk-php
+  install: composer require intacct/intacct-sdk-php
+  official: true
+  note: Official Sage Intacct SDK for PHP (~388k total downloads).
+- language: csharp
+  registry: nuget
+  name: Intacct.SDK
+  url: https://www.nuget.org/packages/Intacct.SDK
+  repo: https://github.com/intacct/intacct-sdk-net
+  install: dotnet add package Intacct.SDK
+  official: true
+  note: Official Sage Intacct SDK for .NET.
+- language: javascript
+  registry: npm
+  name: "@intacct/intacct-sdk"
+  url: https://www.npmjs.com/package/@intacct/intacct-sdk
+  repo: https://github.com/intacct/intacct-sdk-js
+  install: npm install @intacct/intacct-sdk
+  official: true
+  note: Official Sage Intacct SDK for JavaScript / Node.js.
+- language: python
+  registry: github
+  name: intacct-sdk-python
+  url: https://github.com/intacct/intacct-sdk-python
+  repo: https://github.com/intacct/intacct-sdk-python
+  install: pip install git+https://github.com/intacct/intacct-sdk-python
+  official: true
+  note: Official Sage Intacct SDK for Python (Work in Progress; not yet published to PyPI).
