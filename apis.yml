@@ -40,6 +40,7 @@ accessModel:
   confidence: medium
   source:
   - authentication
+  - {url: 'https://www.sageintacct.com/', status: 301, note: 'declared website redirects to https://www.sage.com/en-us/sage-business-cloud/intacct/ — a different registrable domain (sageintacct.com -> sage.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
   generated: '2026-07-22'
   method: derived
 specificationVersion: '0.23'
